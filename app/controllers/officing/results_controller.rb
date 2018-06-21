@@ -32,12 +32,6 @@ class Officing::ResultsController < Officing::BaseController
 
   private
 
-    def check_officer_assignment
-      if @officer_assignment.blank?
-        go_back_to_new(t("officing.results.flash.error_wrong_booth"))
-      end
-    end
-
     def build_results
       @results = []
 
