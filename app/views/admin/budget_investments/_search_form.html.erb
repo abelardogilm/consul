@@ -55,6 +55,12 @@
     </div>
   </div>
 
+  <% %i[without_admin without_valuator under_valuation valuation_finished winners].each do |filter| %>
+    <div class="small-12 medium-3 column">
+      <%= check_box_tag filter, true, params[filter.to_s] %>
+      <%= t("admin.budget_investments.index.filters.#{filter}") %>
+    </div>
+  <% end %>
   <div class="small-12 medium-3 column end">
     <%= submit_tag t("admin.budget_investments.index.buttons.filter"), class: "button expanded" %>
   </div>
